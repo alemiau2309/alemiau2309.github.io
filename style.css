@@ -165,6 +165,7 @@ p {
 
 div.project{
 	display: flex;
+	height: 42vh;
 }
 
 div.project > img {
@@ -172,16 +173,16 @@ padding-top: 2vh;
 
 }
 
-
 .carlos-speech {
 	position: relative;
-	padding: 15px;
+	padding: 7px;
 	margin: 10px 0 0.5em;
 	color: #333;
 	background: #eee;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
+	margin-bottom: 18px;
 }
 
 .carlos-speech::after {
@@ -216,6 +217,11 @@ padding-top: 2vh;
 	width: 33vw;
 }
 
+
+.project-photos a:last-child {
+	margin-top: 1vh;
+}
+
 #about-me p {
 	font-size: 126%;
 	line-height: 122%;
@@ -224,7 +230,7 @@ padding-top: 2vh;
 
 p.project-info {
 	font-size: 68%;
-	width: 76%;
+	width: 36vw;
 	padding: 1.5vmax;
 	letter-spacing: 0;
 }
@@ -234,3 +240,12 @@ p.project-info.carlos-speech::after {
 	left: 16px;
 }
 
+div.project-photos {
+	margin-right: -6vh;
+}
+
+#my-projects nav.anchored {
+	position: initial;
+	margin-top: 8vh;
+	margin-bottom: -2vh;
+}
