@@ -31,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1; 
 	height: 100vh; 
-	background-color: #81D4FA;
+	background-color: #FAFAFA;
 	background-image: url("hearts.gif");
 }
 ol, ul {
@@ -54,29 +54,42 @@ table {
 
 img {
 	width: 50px; 
-	height: 50px;
+	height: auto;
 	border-radius: 5px;
 }
 main {
 	min-height: 50vh;
 }
-
+main:not(:first-child) {
+	margin-bottom: 5vmax;
+}
+body > section {
+	min-height: 95vh;
+}
 main > img {
-	height: 36vh;
+	height: auto;
 	width:  60vw;
 	margin-top: -4vh;
 	z-index: -1000;
 }
 
 h1 {
-	font-size: 7vmax;
+	font-size: 8vmax;
 	margin-top: 1vh;
 	font-family: 'Pacifico';
 	color: #EF5350;
 }
 
+h3 {
+	font-size: 5vmax;
+	font-family: 'Pacifico';
+	color: #EF5350;
+	text-align: center;
+}
+
 header > h1 {
 	font-size: 8vmax;
+	align-self: center;
 }
 
 nav {
@@ -87,7 +100,6 @@ nav {
 nav.primary {
 	height: 30vh;
 }
-
 nav > div.centered {
 	flex-direction: row;
 	height: 50%;
@@ -95,7 +107,6 @@ nav > div.centered {
 }
 
 a {
-	height: 50%;
 	color: #FF5252;
 	letter-spacing: 1vw;
 	font-family: 'Oxygen', sans-serif;
@@ -104,6 +115,7 @@ a:hover {
 	color: #FF8A80;
 }
 nav a {
+	height: auto;
 	width: 100%;
 	text-decoration: none;
 	color: #F44336; 
@@ -114,10 +126,10 @@ nav.primary > a:last-child {
 	margin-top: 3vh;
 }
 
-a > img {
+nav a > img {
 	margin-bottom: -6vh;
 	width: 24vw;
-	height: 18vh;
+	height: auto;
 	padding: 0 10vw;
 	opacity: .6;
 	z-index: -1;
@@ -133,19 +145,18 @@ nav > div a:last-child img {
 
 nav.primary > a:last-child img {
 	width: 50vw;
-	height: 30vh;
+	height: auto;
 	margin-bottom: -14vh;
 	opacity: .5;
 }
 
 header {
-	height: 20vh;
 	display: flex;
 	justify-content: space-between;
 }
 
 header > img {
-	height: 19vh;
+	height: auto;
 	width: 31vw;
 	margin-top: -2vh;
 	margin-right: -2vw;
@@ -165,7 +176,6 @@ p {
 
 div.project{
 	display: flex;
-	height: 42vh;
 }
 
 div.project > img {
@@ -189,7 +199,7 @@ padding-top: 2vh;
 	content: "";
 	position: absolute;
 	top: -30px;
-	left: 227px;
+	left: 77%;
 	border: 15px solid transparent;
 	border-bottom-color: #eee;
 	display: block;
@@ -204,21 +214,21 @@ padding-top: 2vh;
 }
 
 .anchored {
-	position: fixed;
-	bottom: 0;
 	width: 100%;
 	text-align: center;
-	margin-bottom: 2vh;
 }
 
 .project-photos img:first-child {
 	opacity: 1;
-	height: 20vh;
 	width: 33vw;
 }
 
+.project-photos img {
+	height: auto;
+}
 
-.project-photos a:last-child {
+
+.project-photos a ~ a {
 	margin-top: 1vh;
 }
 
@@ -230,9 +240,9 @@ padding-top: 2vh;
 
 p.project-info {
 	font-size: 68%;
-	width: 36vw;
 	padding: 1.5vmax;
 	letter-spacing: 0;
+	text-align: left;
 }
 
 p.project-info.carlos-speech::after {
@@ -241,11 +251,42 @@ p.project-info.carlos-speech::after {
 }
 
 div.project-photos {
-	margin-right: -6vh;
+	width: 45%;
 }
 
-#my-projects nav.anchored {
-	position: initial;
-	margin-top: 8vh;
-	margin-bottom: -2vh;
+div.project-description {
+	width: 55%;
 }
+
+
+@media (min-aspect-ratio:13/9) {
+	#front-page {
+		display: flex;
+	}
+	.small {
+		display: none;
+	}
+	header >img {
+		width: 25vw;
+
+	}
+	nav.primary {
+		height: 95vh;
+	}
+	nav.primary > div.centered {
+		flex-direction: column;
+
+	}
+	nav a >img {
+		width: 11vw;
+	}
+
+	nav.primary > a:last-child img {
+		width: 19vw;
+	}
+
+	main >img {
+		width: 35vw;
+	}
+}
+
