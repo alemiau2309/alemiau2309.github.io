@@ -1,0 +1,340 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1; 
+	height: 100vh; 
+	background-color: #FAFAFA;
+	background-image: url("../static/ui/hearts.gif");
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+i {
+	font-style: italic;
+}
+
+img {
+	width: 50px; 
+	height: auto;
+	border-radius: 5px;
+}
+
+main:not(:first-child) {
+	margin-bottom: 5vmax;
+}
+body > section {
+	min-height: 95vh;
+}
+main > img {
+	height: auto;
+	width:  60vw;
+	margin-top: -4vh;
+	z-index: -1000;
+}
+
+h1 {
+	font-size: 8vmax;
+	margin-top: 1vh;
+	font-family: 'Pacifico';
+	color: #EF5350;
+}
+
+h3 {
+	font-size: 5vmax;
+	font-family: 'Pacifico';
+	color: #EF5350;
+	text-align: center;
+}
+
+header > h1 {
+	font-size: 8vmax;
+	align-self: center;
+}
+
+nav {
+	height: 15vh;
+	text-decoration: none;
+
+}
+nav.primary {
+	height: 30vh;
+}
+nav > div.centered {
+	flex-direction: row;
+	height: 50%;
+	justify-content: space-evenly; 
+}
+
+a {
+	color: #FF5252;
+	letter-spacing: 1vw;
+	font-family: 'Oxygen', sans-serif;
+}
+a:hover {
+	color: #FF8A80;
+}
+nav a {
+	height: auto;
+	width: 100%;
+	text-decoration: none;
+	color: #F44336; 
+
+}
+
+nav.primary > a:last-child {
+	margin-top: 3vh;
+}
+
+nav a > img {
+	margin-bottom: -6vh;
+	width: 24vw;
+	height: auto;
+	padding: 0 10vw;
+	opacity: .6;
+	z-index: -1;
+}
+
+div.project ~ div.project {
+	margin-top: 2vh;
+}
+
+div > a {
+	text-transform: uppercase;
+}
+nav > div a:last-child img {
+	-webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+nav.primary > a:last-child img {
+	width: 50vw;
+	height: auto;
+	margin-bottom: -14vh;
+	opacity: .5;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 4vh;
+}
+
+header > img {
+	height: auto;
+	width: 31vw;
+	margin-top: -2vh;
+	margin-right: -2vw;
+}
+
+article {
+	padding: 3vh 6vw;
+	min-height: 75vh;
+}
+
+p {
+	font-family: "Oxygen", sans-serif;
+	line-height: 125%;
+	color: #262626; 
+	text-align: justify;
+	font-size: 85%;
+}
+
+div.project{
+	display: flex;
+}
+
+div.project > img {
+padding-top: 2vh;
+
+}
+
+.carlos-speech {
+	position: relative;
+	padding: 7px;
+	margin: 10px 0 0.5em;
+	color: #333;
+	background: #eee;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin-bottom: 18px;
+	box-shadow: 0px 2px 8px -2px #262626;
+}
+
+.carlos-speech::after {
+	content: "";
+	position: absolute;
+	top: -30px;
+	left: 68%;
+	border: 15px solid transparent;
+	border-bottom-color: #eee;
+	display: block;
+	width: 0;
+}
+
+.centered {
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.anchored {
+	width: 100%;
+	text-align: center;
+}
+
+
+.project-photos img {
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 2px 2px 6px -2px rgba(38,38,38,1); 
+	width: 30vw;
+}
+
+
+.project-photos a ~ a {
+	margin-top: 1vh;
+}
+
+p.project-info {
+	font-size: 82%;
+	padding: 1.5vmax;
+	letter-spacing: 0;
+	text-align: left;
+	line-height: 130%;
+}
+
+p.project-info.carlos-speech::after {
+	top: -29px;
+	left: 16px;
+}
+
+div.project-photos {
+	width: 45%;
+}
+
+div.project-description {
+	width: 55%;
+}
+
+div.project-description > img {
+	width: 17vw;
+}
+
+#about-me p {
+	padding: 2vh;
+	line-height: 145%;
+	font-size: initial;
+}
+
+#my-projects main > p.carlos-speech {
+	padding: 2vh;
+}
+
+
+@media (min-aspect-ratio:13/9) {
+	#front-page {
+		display: flex;
+	}
+	.small {
+		display: none;
+	}
+	header >img {
+		width: 20vw;
+		margin-right: 0;
+	}
+	nav.primary {
+		height: 95vh;
+	}
+	nav.primary > div.centered {
+		flex-direction: column;
+
+	}
+	nav a >img {
+		width: 11vw;
+	}
+
+	nav.primary > a:last-child img {
+		width: 19vw;
+	}
+
+	main > img {
+		width: 35vw;
+	}
+	
+	.project-photos img {
+		width: 15vw;
+	}	
+
+	div.project-photos {
+		flex-direction: row;
+	}
+
+
+	.project-photos a + a {
+		margin-left: 2vw;
+	}
+
+
+	#my-projects main > p.carlos-speech, #about-me p {
+		padding: 3vh 2vw;
+		font-size: initial;
+	}
+
+	main > p.carlos-speech::after {
+		left: 80%;
+	}
+
+	div.project-description > img {
+		width: 12vw;
+	}
+
+	p.project-info {
+		font-size: 82%;
+		line-height: 135%;
+	}
+
+}
+
