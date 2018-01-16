@@ -248,7 +248,7 @@ p.project-info {
 
 p.project-info.carlos-speech::after {
 	top: -29px;
-	left: 16px;
+	left: 8%;
 }
 
 div.project-photos {
@@ -306,6 +306,7 @@ div.project-description > img {
 	
 	.project-photos img {
 		width: 15vw;
+
 	}	
 
 	div.project-photos {
@@ -328,7 +329,7 @@ div.project-description > img {
 	}
 
 	div.project-description > img {
-		width: 12vw;
+		width: 10vw;
 	}
 
 	p.project-info {
